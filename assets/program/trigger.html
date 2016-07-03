@@ -1,0 +1,85 @@
+---
+permalink: /program/trigger
+layout: default
+---
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/program/triggercompare.js"></script>
+
+<h1>Trigger Advantage Comparison - Created by Brampton Booster</h1>
+
+<table border="1">
+<tr>
+	<th></th>
+	<th># of Critical Triggers</th>
+	<th># of Heal Triggers</th>
+	<th># of Draw Triggers</th>
+</tr>
+<tr>
+	<th>Your trigger ratios</th>
+	<td><input class="textbox" id="ycrit" type="text" maxlength="2" tabindex="1" /></td>
+	<td><input class="textbox" id="yheal" type="text" maxlength="2" tabindex="2" /></td>
+	<td><input class="textbox" id="ydraw" type="text" maxlength="2" tabindex="3" /></td>
+</tr>
+<tr>
+	<th>Your Opponent's trigger ratios</th>
+	<td><input class="textbox" id="fcrit" type="text" maxlength="2" tabindex="4" /></td>
+	<td><input class="textbox" id="fheal" type="text" maxlength="2" tabindex="5" /></td>
+	<td><input class="textbox" id="fdraw" type="text" maxlength="2" tabindex="6" /></td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="calculate()" value="Parse Data" /><div id="error"></div>
+<hr />
+<table border="1">
+<tr>
+	<th colspan="5"><div id="ratio">Expected Losses based on:</div></th>
+</tr>
+<tr>
+	<th>Your attack plan</th>
+	<th>Their defensive plan</th>
+	<th>Damage done to opponent</th>
+	<th>Opponent's card loss</th>
+	<th>Opponent's shield loss</th>
+</tr>
+<tr>
+	<td>R > V > R</td>
+	<td>Let VG through, guard rest</td>
+	<td><div id="dam1"></div></td>
+	<td><div id="car1"></div></td>
+	<td><div id="shi1"></div></td>
+</tr>
+<tr>
+	<td>R > V > R</td>
+	<td>Let RG through, guard rest</td>
+	<td><div id="dam2"></div></td>
+	<td><div id="car2"></div></td>
+	<td><div id="shi2"></div></td>
+</tr>
+<tr>
+	<td>V > R > R</td>
+	<td>Let VG through, guard rest</td>
+	<td><div id="dam3"></div></td>
+	<td><div id="car3"></div></td>
+	<td><div id="shi3"></div></td>
+</tr>
+<tr>
+	<td>V > R > R</td>
+	<td>Let RG through, guard rest</td>
+	<td><div id="dam4"></div></td>
+	<td><div id="car4"></div></td>
+	<td><div id="shi4"></div></td>
+</tr>
+<tr>
+	<th>Damage you heal</th>
+	<td><div id="heal"></div></td>
+</tr>
+<tr>
+	<th>Cards you draw</th>
+	<td><div id="gain"></div></td>
+</tr>
+</table>
+
+<br />
+<input type="button" onclick="explain()" value="About this Program" />
+
+<table border="1"><tr><td><div id="source"></div></td></tr></table>

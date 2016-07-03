@@ -1,0 +1,94 @@
+body {
+	background-image:url(/cfvg/assets/img/bg-img.png);
+    color: #222;
+}
+
+table {
+	padding: 5px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-spacing: 1px;
+	background-color: #F9F9F9;
+}
+
+th, td  {
+	border: none;
+	padding: 8px;
+}
+
+.hno, .hno table, .hno .gsc-control-cse {
+	border: none;
+	background-color: #F9F9F9;
+	padding: 0px;
+	border-width: 0px;
+}
+
+.hno .gsc-search-button {
+	display: none; /* I just wanted a search icon but it doesn't show up :( */
+}
+
+.wrapper {
+    background-color: #E6F3F7; /*inside*/
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 30px;
+}
+
+.widget-wrapper {
+    background-color: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px 4px 4px 4px;
+    margin: 0 0 20px;
+    padding: 20px;
+}
+
+.widget-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: left;
+}
+
+.content {
+    margin: 40px 0 20px 20px;
+}
+
+.sidebar {
+    margin: 40px 20px 20px 0;
+}
+
+.sidebar-left .content {
+    margin: 40px 20px 20px 0;
+}
+
+.sidebar-left .sidebar {
+    margin: 40px 0 20px 20px;
+}
+
+.no-sidebar .content {
+    margin: 40px 20px 20px 20px;
+}
+
+.site-name {
+  margin: 10px 0;
+  font-family: inherit;
+  font-size: 38.5px;
+  font-weight: bold;
+  line-height: 40px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+@media (max-width: 767px) {
+    .content {
+        margin: 40px 20px 20px 20px;
+    }
+
+    .sidebar {
+        margin: 40px 20px 20px 20px;
+    }
+}

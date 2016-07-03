@@ -1,0 +1,18 @@
+---
+permalink: /archive/
+layout: default
+---
+
+<h1>Post Archive</h1>
+
+<dl>
+{% assign current = nil %}
+{% for post in site.posts %}
+    {% capture next %}{{ post.date | date: "%B %Y" }}{% endcapture %}
+    {% if next != current %}
+        </br><dt id="{{ post.date | date: '%B%Y' }}">{{ next }}</dt>
+        {% assign current = next %}
+    {% endif %}
+    <dd>{{ post.date | date: "%a %d" }} <a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></dd>
+{% endfor %}
+</dl>

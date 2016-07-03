@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+{% include header.html %}
+<div class="container">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="content">
+							{% if page.title %}
+							<h1>{{ page.title }}</h1>
+                            <ul class="list-inline">
+							{% if page.author %}
+							<li><span class="vcard"><i class="glyphicon glyphicon-user"></i> {{ page.author }}</span></li>
+							{% else %}
+							<li><span class="vcard"><i class="glyphicon glyphicon-user"></i> Brampton Booster</span></li>
+							{% endif %}
+							<li><span class="published"><i class="glyphicon glyphicon-calendar"></i> {{ page.date | date: "%b %d, %Y" }}</span></li>
+							<li><i class="glyphicon glyphicon-comment"></i><a href="#comment_thread"> Comment</a><script type="text/javascript" src="http://www.intensedebate.com/js/genericLinkWrapperV2.js"></script></li>
+							</ul>
+							{% endif %}
+							
+                            {{ content }}
+							
+							{% if page.comment %}
+								<a name="comment_thread"></a>
+								{% include comments.html %}
+							{% endif %}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sidebar">
+                            {% include sidebar.html %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include footer.html %}
+</body>
+</html>

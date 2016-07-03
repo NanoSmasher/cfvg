@@ -1,0 +1,48 @@
+<div class="container" id="header">
+    <p class="site-name"><a rel="home" title="{{ site.title }}" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/img/masthead.png" /></a></p>
+</div>
+<div class="container">
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+        </div>
+
+		<div class="col-md-9" style="padding: 0px;">
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				<ul class="nav navbar-nav">
+				{% for link in site.data.navigation %}
+
+					{% if link.children %}
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ link.text }} <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						{% for clink in link.children %}
+							<li><a href="{{ site.baseurl}}{{ clink.url }}">
+								{% if clink.icon %}
+								<i class="{{ clink.icon }}" alt="{{ clink.text }}" title="{{ clink.text }}"></i>
+								{% endif %}{{ clink.text }}
+							</a></li>{% endfor %}
+						</ul>
+					</li>
+					{% else %}
+						<li><a href="{{ site.baseurl}}{{ link.url }}">
+							{% if link.icon %}
+							<i class="{{ link.icon }}" alt="{{ link.text }}" title="{{ link.text }}"></i>
+							{% endif %}{{ link.text }}
+						</a></li>
+					{% endif %}
+				{% endfor %}
+					<li><a href="{{site.baseurl}}/rss.xml"><i class="fa fa-rss" alt="RSS" title="RSS"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3" style="padding: 11px; color: #999;">
+			<!-- social media tags? -->
+		</div>
+    </div>
+</div>

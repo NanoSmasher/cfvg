@@ -1,0 +1,23 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="{{site.author}}{% for a in site.keywords %},{{a}}{% endfor %} />
+	<meta name="description" content="{{ page.excerpt | strip_html }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	
+	<link href="{{ site.baseurl }}/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
+	<script src="{{ site.baseurl }}/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+	
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/ico/favicon.png">
+	
+	<title>{% if page.title %}{{ page.title }} - {% endif %}Brampton Booster</title>
+</head>

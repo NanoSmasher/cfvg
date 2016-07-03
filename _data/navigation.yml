@@ -1,0 +1,48 @@
+- text: Home
+  url: /
+  icon: glyphicon glyphicon-home
+- text: Basic Theory
+  children:
+  - text: Lingo
+    url: /blog/lesson0/
+  - text: Magic Numbers
+    url: /blog/lesson1/
+  - text: What to Put In a Deck
+    url: /blog/lesson2/
+  - text: Grade/Trigger Ratios
+    url: /blog/lesson3/
+  - text: The Winning Image
+    url: /blog/lesson4/
+  - text: Advantage and Resources
+    url: /blog/lesson5/
+  - text: Subgames and Field Formation
+    url: /blog/lesson6/
+  - text: Rearguard Talk
+    url: /blog/lesson7/
+  - text: --DISCONTINUED--
+- text: Advanced Theory
+  children:
+  - text: Optimal Standard Attack Order
+    url: /blog/standard/
+  - text: Normalized Optimal Standard Attack Order
+    url: /blog/simplified/
+  - text: Dynamic Field Attack
+    url: /blog/battle/
+  - text: Maximizing Dynamic Field Attack
+    url: /blog/power/
+  - text: Direct and Indirect Advantage
+    url: /blog/direct/
+- text: Calculators/Mechanics
+  children:
+  - text: Grade Distribution Calculator
+    url: /blog/grade-ratio/
+  - text: Trigger Ratio Effect Calculator
+    url: /blog/trigger-ratio/
+  - text: Stand and Draw Triggers
+    url: /blog/stand-and-draw
+  - text: Using Linear Algebra
+    url: /blog/linalg-1/
+  - text: The 3 Prototypes
+    url: /blog/prototype/
+  - text: Grade 3 Checkers
+    url: /blog/morikawa/

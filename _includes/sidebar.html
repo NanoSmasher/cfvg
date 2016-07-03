@@ -1,0 +1,67 @@
+<div class="widget-wrapper hno">
+	<script>
+	  (function() {
+		var cx = '009665570368320352360:aogoajtzcaw';
+		var gcse = document.createElement('script');
+		gcse.type = 'text/javascript';
+		gcse.async = true;
+		gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+			'//www.google.com/cse/cse.js?cx=' + cx;
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	<gcse:search></gcse:search>
+</div>
+
+<div class="widget-wrapper">
+{% if page.url == "/" %}
+<h3 class="widget-title">About this blog</h3>
+<p>{{site.description}}</p>
+{% else %}
+<h3 class="widget-title">About the author</h3>
+<p>{{site.about}}</p>
+{% endif %}
+</div>
+
+<div class="widget-wrapper">
+<h3 class="widget-title">Hypergeometric Cumulative Probability Calculator</h3>
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/program/hgcc.js"></script>
+</div>
+
+<div class="widget-wrapper">
+<h3 class="widget-title">Recent Posts</h3>
+<ul>
+{% for post in site.posts limit:5 %}
+	<li><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="widget-wrapper">
+<h3 class="widget-title">Archive</h3>
+<ul>{% for post in site.posts %}{% capture next %}{{ post.date | date: "%B %Y" }}{% endcapture %}{% if next != current %}
+        <li><a href="{{ site.baseurl }}/archive/#{{ post.date | date: '%B%Y' }}">{{ next }}</a></li>
+        {% assign current = next %}{% endif %}{% endfor %}
+</ul>
+</div>
+
+<div class="widget-wrapper">
+<h3 class="widget-title">External Links</h3>
+<ul>{% for link in site.data.links %}
+    <li>
+		<a href="{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ link.text }}</a>
+		<p>{{ link.info}}</p>
+	</li>{% endfor %}
+</ul>
+</div>
+
+<div class="widget-wrapper">
+<p>
+【Statement】The card images used on this site are obtained from the Cardfight!! Vanguard Official Portal Site (http://cf-vanguard.com),
+in accordance to the guidelines stated there. Re-use of these images(re-post, distribution) is strictly prohibited. (C) Bushiroad All Rights Reserved.
+</p>
+<p>
+All other images excluding the logo are made by myself, but can be used and modifed provided I get acknowledgement. The logo is derived from the boost symbol so it isn't technically mine.
+</p>
+</div>

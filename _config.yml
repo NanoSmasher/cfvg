@@ -1,0 +1,26 @@
+# Site settings
+title: The Brampton Booster
+email: bramptonbooster@hotmail.ca
+author: BramptonBooster
+description: 'Explore the well defined interactions of Cardfight!! Vanguard by applying multiple areas of academics to a card game. With curiosity as the lead this blog uses Game Theory, Mathematics, and Programming to create tools and reports to foster a stronger understanding of the metagame and mechanics in the design space. Encouraging further research allows the community to validate, understand, and ultimately improve.'
+about: 'Ever since I heard a glimpse of JAM Project "Vanguard" I became slightly obsessed with Vanguard (Which means before the anime even started...I am so old). First deck was Japanese OTT but now have Goku, Raindear, DeathRex, Voidmaster/everything, Stern, and a couple of grade one rush builds. Other hobbies I have include chess, math, tennis, smash, fighting games, and sharing neat stuff.'
+keywords: ['Cardfight', 'Vanguard', 'blog', 'Theory', 'Brampton', 'Booster', 'CFVG']
+
+# Internet settings
+github_username: nanosmasher
+intenseID: de87eaf2f53a2866cef4bad6df99ef1c
+gacode: UA-58062642-1
+
+# Build settings
+encoding: utf-8
+markdown: kramdown
+highlighter: pygments
+excerpt_separator: <!-- more -->
+include: ['assets']
+exclude: ['README.md']
+
+# Navigation settings
+url: https://nanosmasher.github.io
+baseurl: /cfvg
+permalink: /blog/:title/
+
